@@ -47,6 +47,8 @@ List of guides detailing how to do different things with Toolbox.
 - [Deploy to Kubernetes](https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/deploy_gke/): How to set up and configure Toolbox to deploy on Kubernetes with Google Kubernetes Engine (GKE).
 - [Deploy using Docker Compose](https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/deploy_docker/): How to deploy Toolbox using Docker Compose.
 - [Export Telemetry](https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/export_telemetry/): How to set up and configure Toolbox to use the Otel Collector.
+- [Generate Agent Skills](https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/generate_skill/): How to generate agent skills from a toolset.
+- [Invoke Tools via CLI](https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/invoke_tool/): Learn how to invoke your tools directly from the command line using the `invoke` command.
 
 ### Resources
 
@@ -61,6 +63,7 @@ List of reference documentation for resources in Toolbox.
   - [Cassandra](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/cassandra/): Apache Cassandra is a NoSQL distributed database known for its horizontal scalability, distributed architecture, and flexible schema definition.
   - [ClickHouse](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/clickhouse/): ClickHouse is an open-source, OLTP database.
   - [Cloud Healthcare API](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/cloud-healthcare/): The Cloud Healthcare API provides a managed solution for storing and accessing healthcare data in Google Cloud, providing a critical bridge  between existing care systems and applications hosted on Google Cloud.
+  - [Cloud Logging Admin](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/cloud-logging-admin/): The Cloud Logging Admin source enables tools to interact with the Cloud Logging API, allowing for the retrieval of log names, monitored resource types, and the querying of log data.
   - [Cloud Monitoring](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/cloud-monitoring/): A "cloud-monitoring" source provides a client for the Cloud Monitoring API.
   - [Cloud SQL for MySQL](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/cloud-sql-mysql/): Cloud SQL for MySQL is a fully-managed database service for MySQL.
   - [Cloud SQL for PostgreSQL](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/cloud-sql-pg/): Cloud SQL for PostgreSQL is a fully-managed database service for Postgres.
@@ -104,6 +107,7 @@ List of reference documentation for resources in Toolbox.
   - [Cassandra](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cassandra/): Tools that work with Cassandra Sources.
   - [ClickHouse](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/clickhouse/): Tools for interacting with ClickHouse databases and tables.
   - [Cloud Healthcare API](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cloudhealthcare/): Tools that work with Cloud Healthcare Sources.
+  - [Cloud Logging Admin](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cloudloggingadmin/): Tools that work with Cloud Logging Admin Sources.
   - [Cloud Monitoring](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cloudmonitoring/): Tools that work with Cloud Monitoring source.
   - [Cloud SQL](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cloudsql/): Tools that work with Cloud SQL. 
   - [Couchbase](https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/couchbase/): Tools that work with Couchbase Sources.
