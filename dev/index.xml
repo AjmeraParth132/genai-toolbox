@@ -1,4 +1,145 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentation on MCP Toolbox for Databases</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/</link><description>Recent content in Documentation on MCP Toolbox for Databases</description><generator>Hugo</generator><language>en</language><atom:link href="https://AjmeraParth132.github.io/genai-toolbox/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>AlloyDB for PostgreSQL</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/alloydb-pg/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/alloydb-pg/</guid><description>&lt;h2 id="about">About&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentation on MCP Toolbox for Databases</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/</link><description>Recent content in Documentation on MCP Toolbox for Databases</description><generator>Hugo</generator><language>en</language><atom:link href="https://AjmeraParth132.github.io/genai-toolbox/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>ADK</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/js-sdk/adk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/js-sdk/adk/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The &lt;code>@toolbox-sdk/adk&lt;/code> package provides a Javascript interface to the MCP Toolbox service, enabling you to load and invoke tools from your own applications.&lt;/p>
+&lt;h2 id="supported-environments">Supported Environments&lt;/h2>
+&lt;p>This SDK is a standard Node.js package built with TypeScript, ensuring broad compatibility with the modern JavaScript ecosystem.&lt;/p>
+&lt;ul>
+&lt;li>Node.js: Actively supported on Node.js v18.x and higher. The package is compatible with both modern ES Module (import) and legacy CommonJS (require).&lt;/li>
+&lt;li>TypeScript: The SDK is written in TypeScript and ships with its own type declarations, providing a first-class development experience with autocompletion and type-checking out of the box.&lt;/li>
+&lt;li>JavaScript: Fully supports modern JavaScript in Node.js environments.&lt;/li>
+&lt;/ul>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npm install @toolbox-sdk/adk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="quickstart">Quickstart&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Start the Toolbox Service&lt;/strong>&lt;/p></description></item><item><title>ADK</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/python-sdk/adk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/python-sdk/adk/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The &lt;code>toolbox-adk&lt;/code> package provides a Python interface to the MCP Toolbox service, enabling you to load and invoke tools from your own applications.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pip install google-adk&lt;span class="o">[&lt;/span>toolbox&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="usage">Usage&lt;/h2>
+&lt;p>The primary entry point is the &lt;code>ToolboxToolset&lt;/code>, which loads tools from a remote Toolbox server and adapts them for use with ADK agents.&lt;/p>
+&lt;style type="text/css">
+ 
+ .notice {
+ --title-color: #fff;
+ --title-background-color: #6be;
+ --content-color: #444;
+ --content-background-color: #e7f2fa;
+ }
+
+ .notice.info {
+ --title-background-color: #fb7;
+ --content-background-color: #fec;
+ }
+
+ .notice.tip {
+ --title-background-color: #5a5;
+ --content-background-color: #efe;
+ }
+
+ .notice.warning {
+ --title-background-color: #c33;
+ --content-background-color: #fee;
+ }
+
+ 
+ @media (prefers-color-scheme:dark) {
+ .notice {
+ --title-color: #fff;
+ --title-background-color: #069;
+ --content-color: #ddd;
+ --content-background-color: #023;
+ }
+
+ .notice.info {
+ --title-background-color: #a50;
+ --content-background-color: #420;
+ }
+
+ .notice.tip {
+ --title-background-color: #363;
+ --content-background-color: #121;
+ }
+
+ .notice.warning {
+ --title-background-color: #800;
+ --content-background-color: #400;
+ }
+ }
+
+ body.dark .notice {
+ --title-color: #fff;
+ --title-background-color: #069;
+ --content-color: #ddd;
+ --content-background-color: #023;
+ }
+
+ body.dark .notice.info {
+ --title-background-color: #a50;
+ --content-background-color: #420;
+ }
+
+ body.dark .notice.tip {
+ --title-background-color: #363;
+ --content-background-color: #121;
+ }
+
+ body.dark .notice.warning {
+ --title-background-color: #800;
+ --content-background-color: #400;
+ }
+
+ 
+ .notice {
+ padding: 18px;
+ line-height: 24px;
+ margin-bottom: 24px;
+ border-radius: 4px;
+ color: var(--content-color);
+ background: var(--content-background-color);
+ }
+
+ .notice p:last-child {
+ margin-bottom: 0
+ }
+
+ 
+ .notice-title {
+ margin: -18px -18px 12px;
+ padding: 4px 18px;
+ border-radius: 4px 4px 0 0;
+ font-weight: 700;
+ color: var(--title-color);
+ background: var(--title-background-color);
+ }
+
+ 
+ .icon-notice {
+ display: inline-flex;
+ align-self: center;
+ margin-right: 8px;
+ }
+
+ .icon-notice img,
+ .icon-notice svg {
+ height: 1em;
+ width: 1em;
+ fill: currentColor;
+ }
+
+ .icon-notice img,
+ .icon-notice.baseline svg {
+ top: .125em;
+ position: relative;
+ }
+&lt;/style>&lt;div class="notice note" >
+ &lt;p class="notice-title">
+ &lt;span class="icon-notice baseline">
+ &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 128 300 300">
+ &lt;path d="M150 128c82.813 0 150 67.188 150 150 0 82.813-67.188 150-150 150C67.187 428 0 360.812 0 278c0-82.813 67.188-150 150-150Zm25 243.555v-37.11c0-3.515-2.734-6.445-6.055-6.445h-37.5c-3.515 0-6.445 2.93-6.445 6.445v37.11c0 3.515 2.93 6.445 6.445 6.445h37.5c3.32 0 6.055-2.93 6.055-6.445Zm-.39-67.188 3.515-121.289c0-1.367-.586-2.734-1.953-3.516-1.172-.976-2.93-1.562-4.688-1.562h-42.968c-1.758 0-3.516.586-4.688 1.563-1.367.78-1.953 2.148-1.953 3.515l3.32 121.29c0 2.734 2.93 4.882 6.64 4.882h36.134c3.515 0 6.445-2.148 6.64-4.883Z"/>
+&lt;/svg>
+
+ &lt;/span>Note&lt;/p></description></item><item><title>AlloyDB for PostgreSQL</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/alloydb-pg/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/alloydb-pg/</guid><description>&lt;h2 id="about">About&lt;/h2>
 &lt;p>&lt;a href="https://cloud.google.com/alloydb/docs">AlloyDB for PostgreSQL&lt;/a> is a fully-managed, PostgreSQL-compatible
 database for demanding transactional workloads. It provides enterprise-grade
 performance and availability while maintaining 100% compatibility with
@@ -1263,6 +1404,12 @@ names, or other parts of the query.&lt;/p></description></item><item><title>CLI<
  &lt;td>&lt;code>--user-agent-metadata&lt;/code>&lt;/td>
  &lt;td>Appends additional metadata to the User-Agent.&lt;/td>
  &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;code>--poll-interval&lt;/code>&lt;/td>
+ &lt;td>Specifies the polling frequency (seconds) for configuration file updates.&lt;/td>
+ &lt;td>&lt;code>0&lt;/code>&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;code>-v&lt;/code>&lt;/td>
@@ -3068,7 +3215,251 @@ Google Cloud project and instance.&lt;/p>
  &lt;path d="M292 303.25V272c0-3.516-2.734-6.25-6.25-6.25H267v-100c0-3.516-2.734-6.25-6.25-6.25h-62.5c-3.516 0-6.25 2.734-6.25 6.25V197c0 3.516 2.734 6.25 6.25 6.25H217v62.5h-18.75c-3.516 0-6.25 2.734-6.25 6.25v31.25c0 3.516 2.734 6.25 6.25 6.25h87.5c3.516 0 6.25-2.734 6.25-6.25Zm-25-175V97c0-3.516-2.734-6.25-6.25-6.25h-37.5c-3.516 0-6.25 2.734-6.25 6.25v31.25c0 3.516 2.734 6.25 6.25 6.25h37.5c3.516 0 6.25-2.734 6.25-6.25Zm125 81.25c0 82.813-67.188 150-150 150-82.813 0-150-67.188-150-150 0-82.813 67.188-150 150-150 82.813 0 150 67.188 150 150Z"/>
 &lt;/svg>
 
- &lt;/span>Info&lt;/p></description></item><item><title>Connect via MCP Client</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect_via_mcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect_via_mcp/</guid><description>&lt;h2 id="toolbox-sdks-vs-model-context-protocol-mcp">Toolbox SDKs vs Model Context Protocol (MCP)&lt;/h2>
+ &lt;/span>Info&lt;/p></description></item><item><title>CockroachDB</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/cockroachdb/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/cockroachdb/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>&lt;a href="https://www.cockroachlabs.com/docs/">CockroachDB&lt;/a> is a distributed SQL database designed for cloud-native applications. It provides strong consistency, horizontal scalability, and built-in resilience with automatic failover and recovery. CockroachDB uses the PostgreSQL wire protocol, making it compatible with many PostgreSQL tools and drivers while providing unique features like multi-region deployments and distributed transactions.&lt;/p>
+&lt;p>&lt;strong>Minimum Version:&lt;/strong> CockroachDB v25.1 or later is recommended for full tool compatibility.&lt;/p>
+&lt;h2 id="available-tools">Available Tools&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cockroachdb/cockroachdb-sql/">&lt;code>cockroachdb-sql&lt;/code>&lt;/a>
+Execute SQL queries as prepared statements in CockroachDB (alias for execute-sql).&lt;/p></description></item><item><title>cockroachdb-execute-sql</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cockroachdb/cockroachdb-execute-sql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cockroachdb/cockroachdb-execute-sql/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &lt;code>cockroachdb-execute-sql&lt;/code> tool executes ad-hoc SQL statements against a CockroachDB database. This tool is designed for interactive workflows where the SQL query is provided dynamically at runtime, making it ideal for developer assistance and exploratory data analysis.&lt;/p>
+&lt;p>The tool takes a single &lt;code>sql&lt;/code> parameter containing the SQL statement to execute and returns the query results.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note:&lt;/strong> This tool is intended for developer assistant workflows with human-in-the-loop and shouldn&amp;rsquo;t be used for production agents. For production use cases with predefined queries, use &lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cockroachdb/cockroachdb-sql/">cockroachdb-sql&lt;/a> instead.&lt;/p></description></item><item><title>cockroachdb-list-schemas</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cockroachdb/cockroachdb-list-schemas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cockroachdb/cockroachdb-list-schemas/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>The &lt;code>cockroachdb-list-schemas&lt;/code> tool retrieves a list of schemas (namespaces) in a CockroachDB database. Schemas are used to organize database objects such as tables, views, and functions into logical groups.&lt;/p>
+&lt;p>This tool is useful for:&lt;/p>
+&lt;ul>
+&lt;li>Understanding database organization&lt;/li>
+&lt;li>Discovering available schemas&lt;/li>
+&lt;li>Multi-tenant application analysis&lt;/li>
+&lt;li>Schema-level access control planning&lt;/li>
+&lt;/ul>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">sources&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">my_cockroachdb&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">cockroachdb&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">host&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">your-cluster.cockroachlabs.cloud&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">port&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;26257&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">user&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">myuser&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">password&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">mypassword&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">database&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">defaultdb&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">queryParams&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">sslmode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">require&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">tools&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">list_schemas&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">cockroachdb-list-schemas&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">my_cockroachdb&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">List all schemas in the database&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;h3 id="required-fields">Required Fields&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>type&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>Must be &lt;code>cockroachdb-list-schemas&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>source&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>Name of the CockroachDB source to use&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>description&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>Human-readable description for the LLM&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="optional-fields">Optional Fields&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>authRequired&lt;/code>&lt;/td>
+ &lt;td>array&lt;/td>
+ &lt;td>List of authentication services required&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="output-structure">Output Structure&lt;/h2>
+&lt;p>The tool returns a list of schemas with the following information:&lt;/p></description></item><item><title>cockroachdb-list-tables</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cockroachdb/cockroachdb-list-tables/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cockroachdb/cockroachdb-list-tables/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>The &lt;code>cockroachdb-list-tables&lt;/code> tool retrieves a list of tables from a CockroachDB database. It provides detailed information about table structure, including columns, constraints, indexes, and foreign key relationships.&lt;/p>
+&lt;p>This tool is useful for:&lt;/p>
+&lt;ul>
+&lt;li>Database schema discovery&lt;/li>
+&lt;li>Understanding table relationships&lt;/li>
+&lt;li>Generating context for AI-powered database queries&lt;/li>
+&lt;li>Documentation and analysis&lt;/li>
+&lt;/ul>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">sources&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">my_cockroachdb&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">cockroachdb&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">host&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">your-cluster.cockroachlabs.cloud&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">port&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;26257&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">user&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">myuser&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">password&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">mypassword&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">database&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">defaultdb&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">queryParams&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">sslmode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">require&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">tools&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">list_all_tables&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">cockroachdb-list-tables&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">my_cockroachdb&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">List all user tables in the database with their structure&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;h3 id="required-fields">Required Fields&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>type&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>Must be &lt;code>cockroachdb-list-tables&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>source&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>Name of the CockroachDB source to use&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>description&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>Human-readable description for the LLM&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="optional-fields">Optional Fields&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>authRequired&lt;/code>&lt;/td>
+ &lt;td>array&lt;/td>
+ &lt;td>List of authentication services required&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="parameters">Parameters&lt;/h2>
+&lt;p>The tool accepts optional runtime parameters:&lt;/p></description></item><item><title>cockroachdb-sql</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cockroachdb/cockroachdb-sql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/cockroachdb/cockroachdb-sql/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>The &lt;code>cockroachdb-sql&lt;/code> tool allows you to execute parameterized SQL queries against a CockroachDB database. This tool supports prepared statements with parameter binding, template parameters for dynamic query construction, and automatic transaction retry for resilience against serialization conflicts.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">sources&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">my_cockroachdb&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">cockroachdb&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">host&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">your-cluster.cockroachlabs.cloud&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">port&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;26257&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">user&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">myuser&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">password&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">mypassword&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">database&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">defaultdb&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">queryParams&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">sslmode&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">require&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">tools&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">get_user_orders&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">cockroachdb-sql&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">my_cockroachdb&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Get all orders for a specific user&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">statement&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> SELECT o.id, o.order_date, o.total_amount, o.status
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> FROM orders o
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> WHERE o.user_id = $1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> ORDER BY o.order_date DESC&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">parameters&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">user_id&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">string&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">The UUID of the user&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;h3 id="required-fields">Required Fields&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>type&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>Must be &lt;code>cockroachdb-sql&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>source&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>Name of the CockroachDB source to use&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>description&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>Human-readable description of what the tool does&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>statement&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>The SQL query to execute&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="optional-fields">Optional Fields&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Field&lt;/th>
+ &lt;th>Type&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>parameters&lt;/code>&lt;/td>
+ &lt;td>array&lt;/td>
+ &lt;td>List of parameter definitions for the query&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>templateParameters&lt;/code>&lt;/td>
+ &lt;td>array&lt;/td>
+ &lt;td>List of template parameters for dynamic query construction&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>authRequired&lt;/code>&lt;/td>
+ &lt;td>array&lt;/td>
+ &lt;td>List of authentication services required&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="parameters">Parameters&lt;/h2>
+&lt;p>Parameters allow you to safely pass values into your SQL queries using prepared statements. CockroachDB uses PostgreSQL-style parameter placeholders: &lt;code>$1&lt;/code>, &lt;code>$2&lt;/code>, etc.&lt;/p></description></item><item><title>Connect via MCP Client</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect_via_mcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect_via_mcp/</guid><description>&lt;h2 id="toolbox-sdks-vs-model-context-protocol-mcp">Toolbox SDKs vs Model Context Protocol (MCP)&lt;/h2>
 &lt;p>Toolbox now supports connections via both the native Toolbox SDKs and via &lt;a href="https://modelcontextprotocol.io/">Model
 Context Protocol (MCP)&lt;/a>. However, Toolbox has
 several features which are not supported in the MCP specification (such as
@@ -3318,7 +3709,217 @@ following parameters:&lt;/p>
 &lt;p>Dataplex uses &lt;a href="https://cloud.google.com/dataplex/docs/iam-and-access-control">Identity and Access Management (IAM)&lt;/a> to control
 user and group access to Dataplex resources. Toolbox will use your
 &lt;a href="https://cloud.google.com/docs/authentication#adc">Application Default Credentials (ADC)&lt;/a> to authorize and authenticate when
-interacting with &lt;a href="https://cloud.google.com/dataplex">Dataplex&lt;/a>.&lt;/p></description></item><item><title>Dgraph</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/dgraph/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/dgraph/</guid><description>&lt;style type="text/css">
+interacting with &lt;a href="https://cloud.google.com/dataplex">Dataplex&lt;/a>.&lt;/p></description></item><item><title>Dataproc Clusters</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/dataproc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/dataproc/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>The &lt;a href="https://cloud.google.com/dataproc/docs/concepts/overview">Dataproc
+Clusters&lt;/a> source
+allows Toolbox to interact with Dataproc Clusters hosted on Google Cloud.&lt;/p>
+&lt;h2 id="available-tools">Available Tools&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-get-cluster/">&lt;code>dataproc-get-cluster&lt;/code>&lt;/a>
+Get a specific Dataproc cluster.&lt;/li>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-list-clusters/">&lt;code>dataproc-list-clusters&lt;/code>&lt;/a>
+List and filter Dataproc clusters.&lt;/li>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-get-job/">&lt;code>dataproc-get-job&lt;/code>&lt;/a>
+Get a specific Dataproc job.&lt;/li>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-list-jobs/">&lt;code>dataproc-list-jobs&lt;/code>&lt;/a>
+List and filter Dataproc jobs.&lt;/li>
+&lt;/ul>
+&lt;h2 id="requirements">Requirements&lt;/h2>
+&lt;h3 id="iam-permissions">IAM Permissions&lt;/h3>
+&lt;p>Dataproc uses &lt;a href="https://cloud.google.com/dataproc/docs/concepts/iam/iam">Identity and Access Management
+(IAM)&lt;/a> to control user
+and group access to Dataproc resources.&lt;/p>
+&lt;p>Toolbox will use your &lt;a href="https://cloud.google.com/docs/authentication#adc">Application Default Credentials
+(ADC)&lt;/a> to authorize and
+authenticate when interacting with Dataproc. When using this method, you need to
+ensure the IAM identity associated with your ADC has the correct
+&lt;a href="https://cloud.google.com/dataproc/docs/concepts/iam/iam">permissions&lt;/a>
+for the actions you intend to perform. Common roles include
+&lt;code>roles/dataproc.editor&lt;/code> or &lt;code>roles/dataproc.viewer&lt;/code>. Follow this
+&lt;a href="https://cloud.google.com/docs/authentication/provide-credentials-adc">guide&lt;/a> to
+set up your ADC.&lt;/p></description></item><item><title>dataproc-get-cluster</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-get-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-get-cluster/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &lt;code>dataproc-get-cluster&lt;/code> tool retrieves a specific Dataproc cluster from a
+Google Cloud Dataproc source. It&amp;rsquo;s compatible with the
+following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/dataproc/">dataproc&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>dataproc-get-cluster&lt;/code> accepts the following parameters:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>clusterName&lt;/code>&lt;/strong> The short name of the cluster to retrieve. e.g. for
+&lt;code>projects/my-project/regions/us-central1/clusters/my-cluster&lt;/code>, pass
+&lt;code>my-cluster&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>The tool gets the &lt;code>project&lt;/code> and &lt;code>region&lt;/code> from the source configuration.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">tools&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">get_cluster&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">dataproc-get-cluster&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">my-dataproc-source&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Use this tool to get details of a Dataproc cluster.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="response-format">Response Format&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;cluster&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;projects/my-project/regions/us-central1/clusters/my-cluster&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;uuid&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;a1b2c3d4-e5f6-7890-1234-567890abcdef&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;state&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;RUNNING&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;createTime&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;2023-10-27T10:00:00Z&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;consoleUrl&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;https://console.cloud.google.com/dataproc/clusters/my-cluster/monitoring?region=us-central1&amp;amp;project=my-project&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;logsUrl&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;https://console.cloud.google.com/logs/viewer?advancedFilter=resource.type%3D%22cloud_dataproc_cluster%22%0Aresource.labels.project_id%3D%22my-project%22%0Aresource.labels.region%3D%22us-central1%22%0Aresource.labels.cluster_name%3D%22my-cluster%22%0Aresource.labels.cluster_uuid%3D%22a1b2c3d4-e5f6-7890-1234-567890abcdef%22&amp;amp;project=my-project&amp;amp;resource=cloud_dataproc_cluster%2Fcluster_name%2Fmy-cluster&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>field&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>type&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>required&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>description&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>type&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Must be &amp;ldquo;dataproc-get-cluster&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>source&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Name of the source the tool should use.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>description&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>authRequired&lt;/td>
+ &lt;td style="text-align: center">string[]&lt;/td>
+ &lt;td style="text-align: center">false&lt;/td>
+ &lt;td>List of auth services required to invoke this tool&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>dataproc-get-job</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-get-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-get-job/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &lt;code>dataproc-get-job&lt;/code> tool retrieves a specific Dataproc job from a
+Google Cloud Dataproc source. It&amp;rsquo;s compatible with the
+following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/dataproc/">dataproc&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>dataproc-get-job&lt;/code> accepts the following parameters:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>jobId&lt;/code>&lt;/strong> The job ID, e.g. for
+&lt;code>projects/my-project/regions/us-central1/jobs/my-job&lt;/code>, pass
+&lt;code>my-job&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>The tool gets the &lt;code>project&lt;/code> and &lt;code>region&lt;/code> from the source configuration.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">tools&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">get_job&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">dataproc-get-job&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">my-dataproc-source&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Use this tool to get details of a Dataproc job.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="response-format">Response Format&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;job&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;reference&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;projectId&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;my-project&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;jobId&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;my-job&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;placement&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;clusterName&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;my-cluster&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;clusterUuid&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;a1b2c3d4-e5f6-7890-1234-567890abcdef&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;consoleUrl&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;https://console.cloud.google.com/dataproc/jobs/my-job?region=us-central1&amp;amp;project=my-project&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;logsUrl&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;https://console.cloud.google.com/logs/viewer?advancedFilter=resource.type%3D%22cloud_dataproc_cluster%22%0Aresource.labels.project_id%3D%22my-project%22%0Aresource.labels.region%3D%22us-central1%22%0Aresource.labels.cluster_name%3D%22my-cluster%22%0Alabels.job_id%3D%22my-job%22&amp;amp;project=my-project&amp;amp;resource=cloud_dataproc_cluster%2Fcluster_name%2Fmy-cluster&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>field&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>type&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>required&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>description&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>type&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Must be &amp;ldquo;dataproc-get-job&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>source&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Name of the source the tool should use.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>description&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>authRequired&lt;/td>
+ &lt;td style="text-align: center">string[]&lt;/td>
+ &lt;td style="text-align: center">false&lt;/td>
+ &lt;td>List of auth services required to invoke this tool&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>dataproc-list-clusters</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-list-clusters/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-list-clusters/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &lt;code>dataproc-list-clusters&lt;/code> tool returns a list of Dataproc clusters from a
+Google Cloud Dataproc source. It&amp;rsquo;s compatible with the
+following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/dataproc/">dataproc&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>dataproc-list-clusters&lt;/code> accepts the following parameters:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>filter&lt;/code>&lt;/strong> (optional): A filter expression to limit the clusters returned.
+Filters are case sensitive and may contain multiple clauses combined with
+logical operators (AND only). Supported fields are &lt;code>status.state&lt;/code>, &lt;code>clusterName&lt;/code>,
+and &lt;code>labels&lt;/code>. For example: &lt;code>status.state = ACTIVE AND clusterName = mycluster&lt;/code>.
+Supported &lt;code>status.state&lt;/code> values are: &lt;code>ACTIVE&lt;/code>, &lt;code>INACTIVE&lt;/code>, &lt;code>CREATING&lt;/code>, &lt;code>RUNNING&lt;/code>,
+&lt;code>ERROR&lt;/code>, &lt;code>DELETING&lt;/code>, &lt;code>UPDATING&lt;/code>, &lt;code>STOPPING&lt;/code>, &lt;code>STOPPED&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>pageSize&lt;/code>&lt;/strong> (optional): The maximum number of clusters to return in a single
+page.&lt;/li>
+&lt;li>&lt;strong>&lt;code>pageToken&lt;/code>&lt;/strong> (optional): A page token, received from a previous call, to
+retrieve the next page of results. Defaults to &lt;code>20&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>The tool gets the &lt;code>project&lt;/code> and &lt;code>region&lt;/code> from the source configuration.&lt;/p></description></item><item><title>dataproc-list-jobs</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-list-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/dataproc/dataproc-list-jobs/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &lt;code>dataproc-list-jobs&lt;/code> tool returns a list of Dataproc jobs from a
+Google Cloud Dataproc source. It&amp;rsquo;s compatible with the
+following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/dataproc/">dataproc&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>dataproc-list-jobs&lt;/code> accepts the following parameters:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>filter&lt;/code>&lt;/strong> (optional): A filter expression to limit the jobs returned.
+Filters are case sensitive and may contain multiple clauses combined with
+logical operators (AND only). Supported fields are &lt;code>status.state&lt;/code> and &lt;code>labels&lt;/code>.
+For example: &lt;code>status.state = RUNNING AND labels.env = production&lt;/code>.
+Supported &lt;code>status.state&lt;/code> values are: &lt;code>PENDING&lt;/code>, &lt;code>RUNNING&lt;/code>, &lt;code>CANCEL_PENDING&lt;/code>,
+&lt;code>JOB_STATE_CANCELLED&lt;/code>, &lt;code>DONE&lt;/code>, &lt;code>ERROR&lt;/code>, &lt;code>ATTEMPT_FAILURE&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>jobStateMatcher&lt;/code>&lt;/strong> (optional): Specifies if the job state matcher should match
+ALL jobs, only ACTIVE jobs, or only NON_ACTIVE jobs. Defaults to ALL.
+Supported values: &lt;code>ALL&lt;/code>, &lt;code>ACTIVE&lt;/code>, &lt;code>NON_ACTIVE&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;code>pageSize&lt;/code>&lt;/strong> (optional): The maximum number of jobs to return in a single
+page.&lt;/li>
+&lt;li>&lt;strong>&lt;code>pageToken&lt;/code>&lt;/strong> (optional): A page token, received from a previous call, to
+retrieve the next page of results.&lt;/li>
+&lt;/ul>
+&lt;p>The tool gets the &lt;code>project&lt;/code> and &lt;code>region&lt;/code> from the source configuration.&lt;/p></description></item><item><title>Dgraph</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/dgraph/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/dgraph/</guid><description>&lt;style type="text/css">
  
  .notice {
  --title-color: #fff;
@@ -4704,6 +5305,57 @@ answer the question. The form of the entry is &lt;code>[{&amp;quot;model&amp;quo
  &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
  &lt;/tr>
  &lt;/tbody>
+&lt;/table></description></item><item><title>looker-create-project-directory</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-create-project-directory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-create-project-directory/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &lt;code>looker-create-project-directory&lt;/code> tool creates a new directory within a specified LookML project.&lt;/p>
+&lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/looker/">looker&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">tools&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-create-project-directory&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-create-project-directory&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-source&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> This tool creates a new directory within a specific LookML project.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> It is useful for organizing project files.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Parameters:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - project_id (string): The ID of the LookML project.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - directory_path (string): The path of the directory to create.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Output:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> A string confirming the creation of the directory.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>field&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>type&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>required&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>description&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>type&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Must be &amp;ldquo;looker-create-project-directory&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>source&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Name of the source Looker instance.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>description&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
 &lt;/table></description></item><item><title>looker-create-project-file</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-create-project-file/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-create-project-file/</guid><description>&lt;h2 id="about">About&lt;/h2>
 &lt;p>A &lt;code>looker-create-project-file&lt;/code> tool creates a new LookML file in a project&lt;/p>
 &lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
@@ -4746,6 +5398,113 @@ as well as the file content.&lt;/p>
  &lt;td style="text-align: center">string&lt;/td>
  &lt;td style="text-align: center">true&lt;/td>
  &lt;td>Must be &amp;ldquo;looker-create-project-file&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>source&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Name of the source Looker instance.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>description&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>looker-create-view-from-table</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-create-view-from-table/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-create-view-from-table/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &amp;ldquo;looker-create-view-from-table&amp;rdquo; tool triggers the automatic generation of LookML view files based on database tables.&lt;/p>
+&lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/looker/">looker&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>looker-create-view-from-table&lt;/code> accepts project_id, connection, tables, and folder_name parameters.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">tools&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">create_view_from_table&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-create-view-from-table&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-source&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> This tool generates boilerplate LookML views directly from the database schema.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> It does not create model or explore files, only view files in the specified folder.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Prerequisite: The Looker session must be in Development Mode. Use `dev_mode: true` first.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Parameters:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - project_id (required): The unique ID of the LookML project.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - connection (required): The database connection name.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - tables (required): A list of objects to generate views for. Each object must contain `schema` and `table_name` (note: table names are case-sensitive). Optional fields include `primary_key`, `base_view`, and `columns` (array of objects with `column_name`).
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - folder_name (optional): The folder to place the view files in (defaults to &amp;#39;views/&amp;#39;).
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Output:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> A confirmation message upon successful view generation, or an error message if the operation fails.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>field&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>type&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>required&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>description&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>kind&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Must be &amp;ldquo;looker-create-view-from-table&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>source&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Name of the source Looker instance.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>description&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>looker-delete-project-directory</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-delete-project-directory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-delete-project-directory/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &lt;code>looker-delete-project-directory&lt;/code> tool deletes a directory from a specified LookML project.&lt;/p>
+&lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/looker/">looker&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">tools&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-delete-project-directory&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-delete-project-directory&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-source&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> This tool deletes a directory from a specific LookML project.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> It is useful for removing unnecessary or obsolete directories.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Parameters:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - project_id (string): The ID of the LookML project.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - directory_path (string): The path of the directory to delete.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Output:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> A string confirming the deletion of the directory.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>field&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>type&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>required&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>description&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>type&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Must be &amp;ldquo;looker-delete-project-directory&amp;rdquo;.&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>source&lt;/td>
@@ -5334,7 +6093,66 @@ in a given model in the source.&lt;/p>
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Parameters:
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - model_name (required): The name of the LookML model, obtained from `get_models`.
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - explore_name (required): The name of the explore within the model, obtained from `get_explores`.&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The response is a json array with the following elements:&lt;/p></description></item><item><title>looker-get-looks</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-looks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-looks/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The response is a json array with the following elements:&lt;/p></description></item><item><title>looker-get-lookml-tests</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-lookml-tests/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-lookml-tests/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &amp;ldquo;looker-get-lookml-tests&amp;rdquo; tool retrieves a list of available LookML tests for a project.&lt;/p>
+&lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/looker/">looker&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>looker-get-lookml-tests&lt;/code> accepts project_id and file_id parameters.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">tools&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">get_lookml_tests&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-get-lookml-tests&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-source&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Returns a list of tests which can be run to validate a project&amp;#39;s LookML code and/or the underlying data, optionally filtered by the file id.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Prerequisite: The Looker session must be in Development Mode. Use `dev_mode: true` first.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Parameters:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - project_id (required): The unique ID of the LookML project.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - file_id (optional): The ID of the file to filter tests by. This must be the complete file path from the project root (e.g., `models/my_model.model.lkml` or `views/my_view.view.lkml`).
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Output:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> A JSON array of LookML test objects, each containing:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - model_name: The name of the model.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - name: The name of the test.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - explore_name: The name of the explore being tested.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - query_url_params: The query parameters used for the test.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - file: The file path where the test is defined.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - line: The line number where the test is defined.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>field&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>type&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>required&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>description&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>kind&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Must be &amp;ldquo;looker-get-lookml-tests&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>source&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Name of the source Looker instance.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>description&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>looker-get-looks</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-looks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-looks/</guid><description>&lt;h2 id="about">About&lt;/h2>
 &lt;p>The &lt;code>looker-get-looks&lt;/code> tool searches for a saved Look by
 name or description.&lt;/p>
 &lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
@@ -5501,7 +6319,57 @@ in a given model in the source.&lt;/p>
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Parameters:
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - model_name (required): The name of the LookML model, obtained from `get_models`.
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - explore_name (required): The name of the explore within the model, obtained from `get_explores`.&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The response is a json array with the following elements:&lt;/p></description></item><item><title>looker-get-project-file</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-project-file/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-project-file/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The response is a json array with the following elements:&lt;/p></description></item><item><title>looker-get-project-directories</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-project-directories/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-project-directories/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &lt;code>looker-get-project-directories&lt;/code> tool retrieves the directories within a specified LookML project.&lt;/p>
+&lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/looker/">looker&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">tools&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-get-project-directories&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-get-project-directories&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-source&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> This tool retrieves a list of directories within a specific LookML project.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> It is useful for exploring the project structure.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Parameters:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - project_id (string): The ID of the LookML project.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Output:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> A JSON array of strings, representing the directories within the project.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>field&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>type&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>required&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>description&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>type&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Must be &amp;ldquo;looker-get-project-directories&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>source&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Name of the source Looker instance.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>description&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>looker-get-project-file</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-project-file/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-get-project-file/</guid><description>&lt;h2 id="about">About&lt;/h2>
 &lt;p>A &lt;code>looker-get-project-file&lt;/code> tool returns the contents of a LookML file.&lt;/p>
 &lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
 &lt;ul>
@@ -6737,6 +7605,68 @@ saved Look.&lt;/p>
  &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
  &lt;/tr>
  &lt;/tbody>
+&lt;/table></description></item><item><title>looker-run-lookml-tests</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-run-lookml-tests/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-run-lookml-tests/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &amp;ldquo;looker-run-lookml-tests&amp;rdquo; tool executes specific LookML tests within a project.&lt;/p>
+&lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/looker/">looker&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>looker-run-lookml-tests&lt;/code> accepts project_id, file_id, test, and model parameters.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">tools&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run_lookml_tests&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-run-lookml-tests&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-source&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> This tool runs LookML tests in the project, filtered by file, test, and/or model. These filters work in conjunction (logical AND).
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Prerequisite: The Looker session must be in Development Mode. Use `dev_mode: true` first.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Parameters:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - project_id (required): The unique ID of the project to run LookML tests for.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - file_id (optional): The ID of the file to run tests for. This must be the complete file path from the project root (e.g., `models/my_model.model.lkml` or `views/my_view.view.lkml`).
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - test (optional): The name of the test to run.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - model (optional): The name of the model to run tests for.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Output:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> A JSON array containing the results of the executed tests, where each object includes:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - model_name: Name of the model tested.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - test_name: Name of the test.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - assertions_count: Total number of assertions in the test.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - assertions_failed: Number of assertions that failed.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - success: Boolean indicating if the test passed.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - errors: Array of error objects (if any), containing details like `message`, `file_path`, `line_number`, and `severity`.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - warnings: Array of warning messages (if any).&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>field&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>type&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>required&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>description&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>kind&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Must be &amp;ldquo;looker-run-lookml-tests&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>source&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Name of the source Looker instance.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>description&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
 &lt;/table></description></item><item><title>looker-update-project-file</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-update-project-file/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-update-project-file/</guid><description>&lt;h2 id="about">About&lt;/h2>
 &lt;p>A &lt;code>looker-update-project-file&lt;/code> tool updates the content of a LookML file.&lt;/p>
 &lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
@@ -6778,6 +7708,59 @@ as well as the new file content.&lt;/p>
  &lt;td style="text-align: center">string&lt;/td>
  &lt;td style="text-align: center">true&lt;/td>
  &lt;td>Must be &amp;ldquo;looker-update-project-file&amp;rdquo;.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>source&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Name of the source Looker instance.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>description&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Description of the tool that is passed to the LLM.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>looker-validate-project</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-validate-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/looker/looker-validate-project/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>A &amp;ldquo;looker-validate-project&amp;rdquo; tool checks the syntax of a LookML project and reports any errors&lt;/p>
+&lt;p>It&amp;rsquo;s compatible with the following sources:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/resources/sources/looker/">looker&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>looker-validate-project&lt;/code> accepts a project_id parameter.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">tools&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">validate_project&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">kind&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-validate-project&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">source&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">looker-source&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> This tool checks a LookML project for syntax errors.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Prerequisite: The Looker session must be in Development Mode. Use `dev_mode: true` first.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Parameters:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> - project_id (required): The unique ID of the LookML project.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> Output:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> A list of error details including the file path and line number, and also a list of models
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> that are not currently valid due to LookML errors.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;strong>field&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>type&lt;/strong>&lt;/th>
+ &lt;th style="text-align: center">&lt;strong>required&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>description&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>kind&lt;/td>
+ &lt;td style="text-align: center">string&lt;/td>
+ &lt;td style="text-align: center">true&lt;/td>
+ &lt;td>Must be &amp;ldquo;looker-validate-project&amp;rdquo;.&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>source&lt;/td>
@@ -7565,12 +8548,9 @@ Oracle database. It&amp;rsquo;s compatible with the following source:&lt;/p>
 &lt;p>The specified SQL statement is executed using &lt;a href="https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html">prepared statements&lt;/a>
 for security and performance. It expects parameter placeholders in the SQL query
 to be in the native Oracle format (e.g., &lt;code>:1&lt;/code>, &lt;code>:2&lt;/code>).&lt;/p>
-&lt;h2 id="example">Example&lt;/h2>
-&lt;blockquote>
-&lt;p>&lt;strong>Note:&lt;/strong> This tool uses parameterized queries to prevent SQL injections.
-Query parameters can be used as substitutes for arbitrary expressions.
-Parameters cannot be used as substitutes for identifiers, column names, table
-names, or other parts of the query.&lt;/p></description></item><item><title>postgres-database-overview</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/postgres/postgres-database-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/postgres/postgres-database-overview/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>By default, tools are configured as &lt;strong>read-only&lt;/strong> (SAFE mode). To execute data modification
+statements (INSERT, UPDATE, DELETE), you must explicitly set the &lt;code>readOnly&lt;/code>
+field to &lt;code>false&lt;/code>.&lt;/p></description></item><item><title>postgres-database-overview</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/postgres/postgres-database-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/postgres/postgres-database-overview/</guid><description>&lt;h2 id="about">About&lt;/h2>
 &lt;p>The &lt;code>postgres-database-overview&lt;/code> fetches the current state of the PostgreSQL
 server. It&amp;rsquo;s compatible with any of the following sources:&lt;/p>
 &lt;ul>
@@ -8320,7 +9300,34 @@ details on how to connect your AI tools (IDEs) to databases via Toolbox and MCP.
  &lt;path d="M551.281 252.36c0-3.32-1.172-6.641-3.515-8.985l-17.774-17.578c-2.344-2.344-5.469-3.711-8.789-3.711-3.32 0-6.445 1.367-8.789 3.71l-79.687 79.493-44.141-44.14c-2.344-2.344-5.469-3.712-8.79-3.712-3.32 0-6.444 1.368-8.788 3.711l-17.774 17.579c-2.343 2.343-3.515 5.664-3.515 8.984 0 3.32 1.172 6.445 3.515 8.789l70.704 70.703c2.343 2.344 5.664 3.711 8.789 3.711 3.32 0 6.64-1.367 8.984-3.71l106.055-106.056c2.343-2.343 3.515-5.468 3.515-8.789ZM600.5 284c0 82.813-67.188 150-150 150-82.813 0-150-67.188-150-150 0-82.813 67.188-150 150-150 82.813 0 150 67.188 150 150Z"/>
 &lt;/svg>
 
- &lt;/span>Tip&lt;/p></description></item><item><title>Quickstart (Local with BigQuery)</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/bigquery/local_quickstart/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/bigquery/local_quickstart/</guid><description>&lt;p>&lt;a href="https://colab.research.google.com/github/googleapis/genai-toolbox/blob/main/docs/en/samples/bigquery/colab_quickstart_bigquery.ipynb">&lt;img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In
+ &lt;/span>Tip&lt;/p></description></item><item><title>Python</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/pre_post_processing/python/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/pre_post_processing/python/</guid><description>&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;p>This tutorial assumes that you have set up MCP Toolbox with a basic agent as described in the &lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/getting-started/local_quickstart/">local quickstart&lt;/a>.&lt;/p>
+&lt;p>This guide demonstrates how to implement these patterns in your Toolbox applications.&lt;/p>
+&lt;h2 id="implementation">Implementation&lt;/h2>
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="adk" aria-controls="tabs-00-00" aria-selected="true">
+ ADK
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="langchain" aria-controls="tabs-00-01" aria-selected="false">
+ Langchain
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ 
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;p>The following example demonstrates how to use &lt;code>ToolboxToolset&lt;/code> with ADK&amp;rsquo;s pre and post processing hooks to implement pre and post processing for tool calls.&lt;/p></description></item><item><title>Quickstart (Local with BigQuery)</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/bigquery/local_quickstart/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/bigquery/local_quickstart/</guid><description>&lt;p>&lt;a href="https://colab.research.google.com/github/googleapis/genai-toolbox/blob/main/docs/en/samples/bigquery/colab_quickstart_bigquery.ipynb">&lt;img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In
 Colab">&lt;/a>&lt;/p>
 &lt;h2 id="before-you-begin">Before you begin&lt;/h2>
 &lt;p>This guide assumes you have already done the following:&lt;/p>
@@ -9615,7 +10622,146 @@ with database and analytics services and popular open-source databases.&lt;/p>
 &lt;p>Gemini CLI is highly extensible, allowing for the addition of new tools and
 capabilities through extensions. You can load the extensions from a GitHub URL,
 a local directory, or a configurable registry. They provide new tools, slash
-commands, and prompts to assist with your workflow.&lt;/p></description></item><item><title>elasticsearch-esql</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/elasticsearch/elasticsearch-esql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/elasticsearch/elasticsearch-esql/</guid><description>&lt;h1 id="elasticsearch-esql">elasticsearch-esql&lt;/h1>
+commands, and prompts to assist with your workflow.&lt;/p></description></item><item><title>Core</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/js-sdk/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/js-sdk/core/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The &lt;code>@toolbox-sdk/core&lt;/code> package provides a Javascript interface to the MCP Toolbox service, enabling you to load and invoke tools from your own applications.&lt;/p>
+&lt;h2 id="supported-environments">Supported Environments&lt;/h2>
+&lt;p>This SDK is a standard Node.js package built with TypeScript, ensuring broad compatibility with the modern JavaScript ecosystem.&lt;/p>
+&lt;ul>
+&lt;li>Node.js: Actively supported on Node.js v18.x and higher. The package is compatible with both modern ES Module (import) and legacy CommonJS (require).&lt;/li>
+&lt;li>TypeScript: The SDK is written in TypeScript and ships with its own type declarations, providing a first-class development experience with autocompletion and type-checking out of the box.&lt;/li>
+&lt;li>JavaScript: Fully supports modern JavaScript in Node.js environments.&lt;/li>
+&lt;/ul>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npm install @toolbox-sdk/core
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="quickstart">Quickstart&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Start the Toolbox Service&lt;/strong>&lt;/p></description></item><item><title>Core</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/python-sdk/core/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/python-sdk/core/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The &lt;code>toolbox-core&lt;/code> package provides a Python interface to the MCP Toolbox service, enabling you to load and invoke tools from your own applications.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pip install toolbox-core
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;style type="text/css">
+ 
+ .notice {
+ --title-color: #fff;
+ --title-background-color: #6be;
+ --content-color: #444;
+ --content-background-color: #e7f2fa;
+ }
+
+ .notice.info {
+ --title-background-color: #fb7;
+ --content-background-color: #fec;
+ }
+
+ .notice.tip {
+ --title-background-color: #5a5;
+ --content-background-color: #efe;
+ }
+
+ .notice.warning {
+ --title-background-color: #c33;
+ --content-background-color: #fee;
+ }
+
+ 
+ @media (prefers-color-scheme:dark) {
+ .notice {
+ --title-color: #fff;
+ --title-background-color: #069;
+ --content-color: #ddd;
+ --content-background-color: #023;
+ }
+
+ .notice.info {
+ --title-background-color: #a50;
+ --content-background-color: #420;
+ }
+
+ .notice.tip {
+ --title-background-color: #363;
+ --content-background-color: #121;
+ }
+
+ .notice.warning {
+ --title-background-color: #800;
+ --content-background-color: #400;
+ }
+ }
+
+ body.dark .notice {
+ --title-color: #fff;
+ --title-background-color: #069;
+ --content-color: #ddd;
+ --content-background-color: #023;
+ }
+
+ body.dark .notice.info {
+ --title-background-color: #a50;
+ --content-background-color: #420;
+ }
+
+ body.dark .notice.tip {
+ --title-background-color: #363;
+ --content-background-color: #121;
+ }
+
+ body.dark .notice.warning {
+ --title-background-color: #800;
+ --content-background-color: #400;
+ }
+
+ 
+ .notice {
+ padding: 18px;
+ line-height: 24px;
+ margin-bottom: 24px;
+ border-radius: 4px;
+ color: var(--content-color);
+ background: var(--content-background-color);
+ }
+
+ .notice p:last-child {
+ margin-bottom: 0
+ }
+
+ 
+ .notice-title {
+ margin: -18px -18px 12px;
+ padding: 4px 18px;
+ border-radius: 4px 4px 0 0;
+ font-weight: 700;
+ color: var(--title-color);
+ background: var(--title-background-color);
+ }
+
+ 
+ .icon-notice {
+ display: inline-flex;
+ align-self: center;
+ margin-right: 8px;
+ }
+
+ .icon-notice img,
+ .icon-notice svg {
+ height: 1em;
+ width: 1em;
+ fill: currentColor;
+ }
+
+ .icon-notice img,
+ .icon-notice.baseline svg {
+ top: .125em;
+ position: relative;
+ }
+&lt;/style>&lt;div class="notice note" >
+ &lt;p class="notice-title">
+ &lt;span class="icon-notice baseline">
+ &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 128 300 300">
+ &lt;path d="M150 128c82.813 0 150 67.188 150 150 0 82.813-67.188 150-150 150C67.187 428 0 360.812 0 278c0-82.813 67.188-150 150-150Zm25 243.555v-37.11c0-3.515-2.734-6.445-6.055-6.445h-37.5c-3.515 0-6.445 2.93-6.445 6.445v37.11c0 3.515 2.93 6.445 6.445 6.445h37.5c3.32 0 6.055-2.93 6.055-6.445Zm-.39-67.188 3.515-121.289c0-1.367-.586-2.734-1.953-3.516-1.172-.976-2.93-1.562-4.688-1.562h-42.968c-1.758 0-3.516.586-4.688 1.563-1.367.78-1.953 2.148-1.953 3.515l3.32 121.29c0 2.734 2.93 4.882 6.64 4.882h36.134c3.515 0 6.445-2.148 6.64-4.883Z"/>
+&lt;/svg>
+
+ &lt;/span>Note&lt;/p></description></item><item><title>elasticsearch-esql</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/elasticsearch/elasticsearch-esql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/elasticsearch/elasticsearch-esql/</guid><description>&lt;h1 id="elasticsearch-esql">elasticsearch-esql&lt;/h1>
 &lt;p>Execute ES|QL queries.&lt;/p>
 &lt;p>This tool allows you to execute ES|QL queries against your Elasticsearch
 cluster. You can use this to perform complex searches and aggregations.&lt;/p>
@@ -9690,17 +10836,34 @@ that don&amp;rsquo;t.&lt;/p></description></item><item><title>Firestore using MC
  &lt;link rel="canonical" href="https://cloud.google.com/firestore/native/docs/connect-ide-using-mcp-toolbox"/>
  &lt;meta http-equiv="refresh" content="0;url=https://cloud.google.com/firestore/native/docs/connect-ide-using-mcp-toolbox"/>
  &lt;/head>
-&lt;/html></description></item><item><title>Go SDK</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/go-sdk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/go-sdk/</guid><description>&lt;html>
- &lt;head>
- &lt;link rel="canonical" href="https://github.com/googleapis/mcp-toolbox-sdk-go"/>
- &lt;meta http-equiv="refresh" content="0;url=https://github.com/googleapis/mcp-toolbox-sdk-go"/>
- &lt;/head>
-&lt;/html></description></item><item><title>JS SDK</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/js-sdk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/js-sdk/</guid><description>&lt;html>
- &lt;head>
- &lt;link rel="canonical" href="https://github.com/googleapis/mcp-toolbox-sdk-js"/>
- &lt;meta http-equiv="refresh" content="0;url=https://github.com/googleapis/mcp-toolbox-sdk-js"/>
- &lt;/head>
-&lt;/html></description></item><item><title>Looker using MCP</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect-ide/looker_mcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect-ide/looker_mcp/</guid><description>&lt;p>&lt;a href="https://modelcontextprotocol.io/introduction">Model Context Protocol (MCP)&lt;/a> is
+&lt;/html></description></item><item><title>Javascript</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/pre_post_processing/js/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/pre_post_processing/js/</guid><description>&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;p>This tutorial assumes that you have set up MCP Toolbox with a basic agent as described in the &lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/getting-started/local_quickstart_js/">local quickstart&lt;/a>.&lt;/p>
+&lt;p>This guide demonstrates how to implement these patterns in your Toolbox applications.&lt;/p>
+&lt;h2 id="implementation">Implementation&lt;/h2>
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="adk" aria-controls="tabs-00-00" aria-selected="true">
+ ADK
+ &lt;/button>
+ &lt;/li>&lt;li class="nav-item">
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="langchain" aria-controls="tabs-00-01" aria-selected="false">
+ Langchain
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ 
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;p>The following example demonstrates how to use the &lt;code>beforeToolCallback&lt;/code> and &lt;code>afterToolCallback&lt;/code> hooks in the ADK &lt;code>LlmAgent&lt;/code> to implement pre and post processing logic.&lt;/p></description></item><item><title>Looker using MCP</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect-ide/looker_mcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect-ide/looker_mcp/</guid><description>&lt;p>&lt;a href="https://modelcontextprotocol.io/introduction">Model Context Protocol (MCP)&lt;/a> is
 an open protocol for connecting Large Language Models (LLMs) to data sources
 like Postgres. This guide covers how to use &lt;a href="https://github.com/googleapis/genai-toolbox">MCP Toolbox for Databases&lt;/a>
 to expose your developer assistant tools to a Looker instance:&lt;/p>
@@ -10036,17 +11199,14 @@ your preferred virtual environment tool for managing dependencies e.g.
 
 
 
+
+
  &lt;p>If you plan to use &lt;strong>Google Cloud’s Vertex AI&lt;/strong> with your agent (e.g., using
 &lt;code>vertexai=True&lt;/code> or a Google GenAI model), follow these one-time setup steps for
 local development:&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>&lt;a href="https://cloud.google.com/sdk/docs/install">Install the Google Cloud CLI&lt;/a>&lt;/p></description></item><item><title>Python SDK</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/python-sdk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/python-sdk/</guid><description>&lt;html>
- &lt;head>
- &lt;link rel="canonical" href="https://github.com/googleapis/mcp-toolbox-sdk-python"/>
- &lt;meta http-equiv="refresh" content="0;url=https://github.com/googleapis/mcp-toolbox-sdk-python"/>
- &lt;/head>
-&lt;/html></description></item><item><title>Quickstart (MCP with Looker and Gemini-CLI)</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/looker/looker_gemini/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/looker/looker_gemini/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>&lt;a href="https://cloud.google.com/sdk/docs/install">Install the Google Cloud CLI&lt;/a>&lt;/p></description></item><item><title>Quickstart (MCP with Looker and Gemini-CLI)</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/looker/looker_gemini/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/looker/looker_gemini/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>&lt;a href="https://modelcontextprotocol.io">Model Context Protocol&lt;/a> is an open protocol
 that standardizes how applications provide context to LLMs. Check out this page
 on how to &lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect_via_mcp/">connect to Toolbox via MCP&lt;/a>.&lt;/p>
@@ -10254,7 +11414,186 @@ roles):&lt;/p>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>To create a secret, you must have the following roles:&lt;/p></description></item><item><title>JS Quickstart (Local)</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/getting-started/local_quickstart_js/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/getting-started/local_quickstart_js/</guid><description>&lt;h2 id="before-you-begin">Before you begin&lt;/h2>
+&lt;p>To create a secret, you must have the following roles:&lt;/p></description></item><item><title>Go</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/pre_post_processing/go/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/samples/pre_post_processing/go/</guid><description>&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;p>This tutorial assumes that you have set up MCP Toolbox with a basic agent as described in the &lt;a href="https://AjmeraParth132.github.io/genai-toolbox/dev/getting-started/local_quickstart_go/">local quickstart&lt;/a>.&lt;/p>
+&lt;p>This guide demonstrates how to implement these patterns in your Toolbox applications.&lt;/p>
+&lt;h2 id="implementation">Implementation&lt;/h2>
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">
+ &lt;li class="nav-item">
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="adk" aria-controls="tabs-00-00" aria-selected="true">
+ ADK
+ &lt;/button>
+ &lt;/li>
+&lt;/ul>
+
+&lt;div class="tab-content" id="tabs-0-content">
+ 
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0">
+ &lt;p>The following example demonstrates how to use the &lt;code>beforeToolCallback&lt;/code> and &lt;code>afterToolCallback&lt;/code> hooks in the ADK &lt;code>LlmAgent&lt;/code> to implement pre and post processing logic.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;context&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;log&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;os&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;strings&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;time&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;github.com/googleapis/mcp-toolbox-sdk-go/tbadk&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;google.golang.org/adk/agent&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;google.golang.org/adk/agent/llmagent&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;google.golang.org/adk/model/gemini&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;google.golang.org/adk/runner&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;google.golang.org/adk/session&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;google.golang.org/adk/tool&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;google.golang.org/genai&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">const&lt;/span> &lt;span class="nx">systemPrompt&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s">`You&amp;#39;re a helpful hotel assistant. You handle hotel searching, booking and
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">cancellations. When the user searches for a hotel, mention it&amp;#39;s name, id,
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">location and price tier. Always mention hotel ids while performing any
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">searches. This is very important for any operations. For any bookings or
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">cancellations, please provide the appropriate confirmation. Be sure to
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">update checkin or checkout dates if mentioned by the user.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">Don&amp;#39;t ask for confirmations from the user.`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">queries&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;Book hotel with id 3.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="s">&amp;#34;Update my hotel with id 3 with checkin date 2025-01-04 and checkout date 2025-01-20&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Pre-processing&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">enforceBusinessRules&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span> &lt;span class="nx">tool&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">tool&lt;/span> &lt;span class="nx">tool&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Tool&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="kd">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="kt">any&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="kt">any&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;POLICY CHECK: Intercepting &amp;#39;%s&amp;#39;\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">tool&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Name&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">if&lt;/span> &lt;span class="nx">tool&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Name&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s">&amp;#34;update-hotel&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">checkinStr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">okCheckin&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;checkin_date&amp;#34;&lt;/span>&lt;span class="p">].(&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">checkoutStr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">okCheckout&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;checkout_date&amp;#34;&lt;/span>&lt;span class="p">].(&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="k">if&lt;/span> &lt;span class="nx">okCheckin&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">okCheckout&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="nx">startDate&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">errStart&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Parse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;2006-01-02&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">checkinStr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="nx">endDate&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">errEnd&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Parse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;2006-01-02&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">checkoutStr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="k">if&lt;/span> &lt;span class="nx">errStart&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nx">errEnd&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">				&lt;span class="k">return&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="nx">duration&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">endDate&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Sub&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">startDate&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nf">Hours&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">24&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="k">if&lt;/span> &lt;span class="nx">duration&lt;/span> &lt;span class="p">&amp;gt;&lt;/span> &lt;span class="mi">14&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">				&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;BLOCKED: Stay too long&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">				&lt;span class="k">return&lt;/span> &lt;span class="kd">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="kt">any&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="s">&amp;#34;Error&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s">&amp;#34;Maximum stay duration is 14 days.&amp;#34;&lt;/span>&lt;span class="p">},&lt;/span> &lt;span class="kc">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">return&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Post-processing&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">enrichResponse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span> &lt;span class="nx">tool&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">tool&lt;/span> &lt;span class="nx">tool&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Tool&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="kd">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="kt">any&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="kt">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="kt">any&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">resultStr&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Sprintf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%v&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">if&lt;/span> &lt;span class="nx">tool&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Name&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s">&amp;#34;book-hotel&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="k">return&lt;/span> &lt;span class="kc">nil&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="k">if&lt;/span> &lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">ok&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;Error&amp;#34;&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="p">!&lt;/span>&lt;span class="nx">ok&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="p">!&lt;/span>&lt;span class="nx">strings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Contains&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resultStr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Error&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="kd">const&lt;/span> &lt;span class="nx">loyaltyBonus&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mi">500&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="nx">enrichedResult&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Sprintf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Booking Confirmed!\n You earned %d Loyalty Points with this stay.\n\nSystem Details: %s&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">loyaltyBonus&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">resultStr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="k">return&lt;/span> &lt;span class="kd">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kt">string&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="kt">any&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="s">&amp;#34;confirmation&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">enrichedResult&lt;/span>&lt;span class="p">},&lt;/span> &lt;span class="kc">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">genaiKey&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;GOOGLE_API_KEY&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">toolboxURL&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">&amp;#34;http://localhost:5000&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">ctx&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Background&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">toolboxClient&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">tbadk&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">NewToolboxClient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">toolboxURL&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Fatalf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Failed to create MCP Toolbox client: %v&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">toolsetName&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">&amp;#34;my-toolset&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">mcpTools&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">toolboxClient&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">LoadToolset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">toolsetName&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">ctx&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Fatalf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Failed to load MCP toolset &amp;#39;%s&amp;#39;: %v\nMake sure your Toolbox server is running.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">toolsetName&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">model&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">gemini&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">NewModel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;gemini-2.5-flash&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">genai&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ClientConfig&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">APIKey&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">genaiKey&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Fatalf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Failed to create model: %v&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">tools&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nb">make&lt;/span>&lt;span class="p">([]&lt;/span>&lt;span class="nx">tool&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Tool&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">mcpTools&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">for&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">range&lt;/span> &lt;span class="nx">mcpTools&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">tools&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">mcpTools&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">llmagent&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">llmagent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">New&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">llmagent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Config&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">Name&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s">&amp;#34;hotel_assistant&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">Model&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">model&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">Description&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s">&amp;#34;Agent to answer questions about hotels.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">Instruction&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">systemPrompt&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">Tools&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">tools&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="c1">// Add pre- and post- processing hooks&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">BeforeToolCallbacks&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="nx">llmagent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">BeforeToolCallback&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">enforceBusinessRules&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">AfterToolCallbacks&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[]&lt;/span>&lt;span class="nx">llmagent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">AfterToolCallback&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">enrichResponse&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Fatalf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Failed to create agent: %v&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">appName&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">&amp;#34;hotel_assistant&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">userID&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="s">&amp;#34;user-123&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">sessionService&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">session&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">InMemoryService&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">respSess&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">sessionService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">session&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">CreateRequest&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">AppName&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">appName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">UserID&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">userID&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Fatalf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Failed to create the session service: %v&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">sess&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">respSess&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Session&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="nx">r&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">runner&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">New&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">runner&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Config&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">AppName&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">appName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">Agent&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">llmagent&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">SessionService&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">sessionService&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Fatalf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Failed to create runner: %v&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="k">for&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">query&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">range&lt;/span> &lt;span class="nx">queries&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;\n=== Query %d: %s ===\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">query&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">userMsg&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">genai&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">NewContentFromText&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">query&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">genai&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">RoleUser&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">streamingMode&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">agent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">StreamingModeSSE&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">runIter&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">r&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">userID&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">sess&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">ID&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="nx">userMsg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">agent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">RunConfig&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="nx">StreamingMode&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nx">streamingMode&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;AI: &amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="k">for&lt;/span> &lt;span class="nx">event&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">range&lt;/span> &lt;span class="nx">runIter&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="k">if&lt;/span> &lt;span class="nx">event&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Content&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">				&lt;span class="k">for&lt;/span> &lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">p&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">range&lt;/span> &lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Content&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Parts&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">					&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Text&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">				&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">			&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">		&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;\n&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">strings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Repeat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;-&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">80&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s">&amp;#34;\n&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">	&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also add model-level (&lt;code>beforeModelCallback&lt;/code>, &lt;code>afterModelCallback&lt;/code>) and agent-level (&lt;code>beforeAgentCallback&lt;/code>, &lt;code>afterAgentCallback&lt;/code>) hooks to intercept messages at different stages of the execution loop.&lt;/p></description></item><item><title>JS Quickstart (Local)</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/getting-started/local_quickstart_js/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/getting-started/local_quickstart_js/</guid><description>&lt;h2 id="before-you-begin">Before you begin&lt;/h2>
 &lt;p>This guide assumes you have already done the following:&lt;/p>
 &lt;ol>
 &lt;li>Installed &lt;a href="https://nodejs.org/">Node.js (v18 or higher)&lt;/a>.&lt;/li>
@@ -10379,6 +11718,8 @@ roles):&lt;/p>
 
 
 
+
+
  &lt;p>If you plan to use &lt;strong>Google Cloud’s Vertex AI&lt;/strong> with your agent (e.g., using
 &lt;code>vertexai=True&lt;/code> or a Google GenAI model), follow these one-time setup steps for
 local development:&lt;/p>
@@ -10391,7 +11732,153 @@ local development:&lt;/p>
 (ADC)&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Set your project and enable Vertex AI&lt;/p></description></item><item><title>spanner-list-graphs</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/spanner/spanner-list-graphs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/spanner/spanner-list-graphs/</guid><description>&lt;h2 id="about">About&lt;/h2>
+&lt;p>Set your project and enable Vertex AI&lt;/p></description></item><item><title>LangChain/LangGraph</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/python-sdk/langchain/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/python-sdk/langchain/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The &lt;code>toolbox-langchain&lt;/code> package provides a Python interface to the MCP Toolbox service, enabling you to load and invoke tools from your own applications.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pip install toolbox-langchain
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="quickstart">Quickstart&lt;/h2>
+&lt;p>Here&amp;rsquo;s a minimal example to get you started using
+&lt;a href="https://langchain-ai.github.io/langgraph/reference/prebuilt/#langgraph.prebuilt.chat_agent_executor.create_react_agent">LangGraph&lt;/a>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">toolbox_langchain&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">ToolboxClient&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">langchain_google_vertexai&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">ChatVertexAI&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">langgraph.prebuilt&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">create_react_agent&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">async&lt;/span> &lt;span class="k">with&lt;/span> &lt;span class="n">ToolboxClient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;http://127.0.0.1:5000&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">toolbox&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">tools&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">toolbox&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">load_toolset&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">model&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">ChatVertexAI&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">model&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;gemini-3-flash-preview&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">agent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">create_react_agent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">model&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">tools&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">prompt&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;How&amp;#39;s the weather today?&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">s&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">agent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">stream&lt;/span>&lt;span class="p">({&lt;/span>&lt;span class="s2">&amp;#34;messages&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[(&lt;/span>&lt;span class="s2">&amp;#34;user&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">prompt&lt;/span>&lt;span class="p">)]},&lt;/span> &lt;span class="n">stream_mode&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;values&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">message&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;messages&amp;#34;&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">isinstance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">tuple&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">message&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pretty_print&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;style type="text/css">
+ 
+ .notice {
+ --title-color: #fff;
+ --title-background-color: #6be;
+ --content-color: #444;
+ --content-background-color: #e7f2fa;
+ }
+
+ .notice.info {
+ --title-background-color: #fb7;
+ --content-background-color: #fec;
+ }
+
+ .notice.tip {
+ --title-background-color: #5a5;
+ --content-background-color: #efe;
+ }
+
+ .notice.warning {
+ --title-background-color: #c33;
+ --content-background-color: #fee;
+ }
+
+ 
+ @media (prefers-color-scheme:dark) {
+ .notice {
+ --title-color: #fff;
+ --title-background-color: #069;
+ --content-color: #ddd;
+ --content-background-color: #023;
+ }
+
+ .notice.info {
+ --title-background-color: #a50;
+ --content-background-color: #420;
+ }
+
+ .notice.tip {
+ --title-background-color: #363;
+ --content-background-color: #121;
+ }
+
+ .notice.warning {
+ --title-background-color: #800;
+ --content-background-color: #400;
+ }
+ }
+
+ body.dark .notice {
+ --title-color: #fff;
+ --title-background-color: #069;
+ --content-color: #ddd;
+ --content-background-color: #023;
+ }
+
+ body.dark .notice.info {
+ --title-background-color: #a50;
+ --content-background-color: #420;
+ }
+
+ body.dark .notice.tip {
+ --title-background-color: #363;
+ --content-background-color: #121;
+ }
+
+ body.dark .notice.warning {
+ --title-background-color: #800;
+ --content-background-color: #400;
+ }
+
+ 
+ .notice {
+ padding: 18px;
+ line-height: 24px;
+ margin-bottom: 24px;
+ border-radius: 4px;
+ color: var(--content-color);
+ background: var(--content-background-color);
+ }
+
+ .notice p:last-child {
+ margin-bottom: 0
+ }
+
+ 
+ .notice-title {
+ margin: -18px -18px 12px;
+ padding: 4px 18px;
+ border-radius: 4px 4px 0 0;
+ font-weight: 700;
+ color: var(--title-color);
+ background: var(--title-background-color);
+ }
+
+ 
+ .icon-notice {
+ display: inline-flex;
+ align-self: center;
+ margin-right: 8px;
+ }
+
+ .icon-notice img,
+ .icon-notice svg {
+ height: 1em;
+ width: 1em;
+ fill: currentColor;
+ }
+
+ .icon-notice img,
+ .icon-notice.baseline svg {
+ top: .125em;
+ position: relative;
+ }
+&lt;/style>&lt;div class="notice tip" >
+ &lt;p class="notice-title">
+ &lt;span class="icon-notice baseline">
+ &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="300.5 134 300 300">
+ &lt;path d="M551.281 252.36c0-3.32-1.172-6.641-3.515-8.985l-17.774-17.578c-2.344-2.344-5.469-3.711-8.789-3.711-3.32 0-6.445 1.367-8.789 3.71l-79.687 79.493-44.141-44.14c-2.344-2.344-5.469-3.712-8.79-3.712-3.32 0-6.444 1.368-8.788 3.711l-17.774 17.579c-2.343 2.343-3.515 5.664-3.515 8.984 0 3.32 1.172 6.445 3.515 8.789l70.704 70.703c2.343 2.344 5.664 3.711 8.789 3.711 3.32 0 6.64-1.367 8.984-3.71l106.055-106.056c2.343-2.343 3.515-5.468 3.515-8.789ZM600.5 284c0 82.813-67.188 150-150 150-82.813 0-150-67.188-150-150 0-82.813 67.188-150 150-150 82.813 0 150 67.188 150 150Z"/>
+&lt;/svg>
+
+ &lt;/span>Tip&lt;/p></description></item><item><title>spanner-list-graphs</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/spanner/spanner-list-graphs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/resources/tools/spanner/spanner-list-graphs/</guid><description>&lt;h2 id="about">About&lt;/h2>
 &lt;p>A &lt;code>spanner-list-graphs&lt;/code> tool retrieves comprehensive schema information about
 graphs in a Cloud Spanner database. It returns detailed metadata including
 node tables, edge tables, labels and property declarations. It&amp;rsquo;s compatible with:&lt;/p>
@@ -10927,6 +12414,8 @@ section.&lt;/p>
 
 
 
+
+
  &lt;p>If you plan to use &lt;strong>Google Cloud’s Vertex AI&lt;/strong> with your agent (e.g., using
 &lt;code>vertexai=True&lt;/code> or a Google GenAI model), follow these one-time setup steps for
 local development:&lt;/p>
@@ -10939,7 +12428,159 @@ local development:&lt;/p>
 (ADC)&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Set your project and enable Vertex AI&lt;/p></description></item><item><title>Cloud SQL for SQL Server Admin using MCP</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect-ide/cloud_sql_mssql_admin_mcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect-ide/cloud_sql_mssql_admin_mcp/</guid><description>&lt;p>This guide covers how to use &lt;a href="https://github.com/googleapis/genai-toolbox">MCP Toolbox for Databases&lt;/a> to expose your
+&lt;p>Set your project and enable Vertex AI&lt;/p></description></item><item><title>LlamaIndex</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/python-sdk/llamaindex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/sdks/python-sdk/llamaindex/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The &lt;code>toolbox-llamaindex&lt;/code> package provides a Python interface to the MCP Toolbox service, enabling you to load and invoke tools from your own applications.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">pip install toolbox-llamaindex
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="quickstart">Quickstart&lt;/h2>
+&lt;p>Here&amp;rsquo;s a minimal example to get you started using
+&lt;a href="https://docs.llamaindex.ai/en/stable/#getting-started">LlamaIndex&lt;/a>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">asyncio&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">llama_index.llms.google_genai&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">GoogleGenAI&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">llama_index.core.agent.workflow&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">AgentWorkflow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">toolbox_llamaindex&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">ToolboxClient&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">async&lt;/span> &lt;span class="k">def&lt;/span> &lt;span class="nf">run_agent&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">async&lt;/span> &lt;span class="k">with&lt;/span> &lt;span class="n">ToolboxClient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;http://127.0.0.1:5000&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">toolbox&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">tools&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">toolbox&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">load_toolset&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">vertex_model&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">GoogleGenAI&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">model&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;gemini-3-flash-preview&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">vertexai_config&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;project&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;project-id&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;location&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;us-central1&amp;#34;&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">agent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">AgentWorkflow&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">from_tools_or_functions&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">tools&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">llm&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">vertex_model&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">system_prompt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;You are a helpful assistant.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">await&lt;/span> &lt;span class="n">agent&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">user_msg&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;Get some response from the agent.&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">asyncio&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">run_agent&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;style type="text/css">
+ 
+ .notice {
+ --title-color: #fff;
+ --title-background-color: #6be;
+ --content-color: #444;
+ --content-background-color: #e7f2fa;
+ }
+
+ .notice.info {
+ --title-background-color: #fb7;
+ --content-background-color: #fec;
+ }
+
+ .notice.tip {
+ --title-background-color: #5a5;
+ --content-background-color: #efe;
+ }
+
+ .notice.warning {
+ --title-background-color: #c33;
+ --content-background-color: #fee;
+ }
+
+ 
+ @media (prefers-color-scheme:dark) {
+ .notice {
+ --title-color: #fff;
+ --title-background-color: #069;
+ --content-color: #ddd;
+ --content-background-color: #023;
+ }
+
+ .notice.info {
+ --title-background-color: #a50;
+ --content-background-color: #420;
+ }
+
+ .notice.tip {
+ --title-background-color: #363;
+ --content-background-color: #121;
+ }
+
+ .notice.warning {
+ --title-background-color: #800;
+ --content-background-color: #400;
+ }
+ }
+
+ body.dark .notice {
+ --title-color: #fff;
+ --title-background-color: #069;
+ --content-color: #ddd;
+ --content-background-color: #023;
+ }
+
+ body.dark .notice.info {
+ --title-background-color: #a50;
+ --content-background-color: #420;
+ }
+
+ body.dark .notice.tip {
+ --title-background-color: #363;
+ --content-background-color: #121;
+ }
+
+ body.dark .notice.warning {
+ --title-background-color: #800;
+ --content-background-color: #400;
+ }
+
+ 
+ .notice {
+ padding: 18px;
+ line-height: 24px;
+ margin-bottom: 24px;
+ border-radius: 4px;
+ color: var(--content-color);
+ background: var(--content-background-color);
+ }
+
+ .notice p:last-child {
+ margin-bottom: 0
+ }
+
+ 
+ .notice-title {
+ margin: -18px -18px 12px;
+ padding: 4px 18px;
+ border-radius: 4px 4px 0 0;
+ font-weight: 700;
+ color: var(--title-color);
+ background: var(--title-background-color);
+ }
+
+ 
+ .icon-notice {
+ display: inline-flex;
+ align-self: center;
+ margin-right: 8px;
+ }
+
+ .icon-notice img,
+ .icon-notice svg {
+ height: 1em;
+ width: 1em;
+ fill: currentColor;
+ }
+
+ .icon-notice img,
+ .icon-notice.baseline svg {
+ top: .125em;
+ position: relative;
+ }
+&lt;/style>&lt;div class="notice tip" >
+ &lt;p class="notice-title">
+ &lt;span class="icon-notice baseline">
+ &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="300.5 134 300 300">
+ &lt;path d="M551.281 252.36c0-3.32-1.172-6.641-3.515-8.985l-17.774-17.578c-2.344-2.344-5.469-3.711-8.789-3.711-3.32 0-6.445 1.367-8.789 3.71l-79.687 79.493-44.141-44.14c-2.344-2.344-5.469-3.712-8.79-3.712-3.32 0-6.444 1.368-8.788 3.711l-17.774 17.579c-2.343 2.343-3.515 5.664-3.515 8.984 0 3.32 1.172 6.445 3.515 8.789l70.704 70.703c2.343 2.344 5.664 3.711 8.789 3.711 3.32 0 6.64-1.367 8.984-3.71l106.055-106.056c2.343-2.343 3.515-5.468 3.515-8.789ZM600.5 284c0 82.813-67.188 150-150 150-82.813 0-150-67.188-150-150 0-82.813 67.188-150 150-150 82.813 0 150 67.188 150 150Z"/>
+&lt;/svg>
+
+ &lt;/span>Tip&lt;/p></description></item><item><title>Cloud SQL for SQL Server Admin using MCP</title><link>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect-ide/cloud_sql_mssql_admin_mcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://AjmeraParth132.github.io/genai-toolbox/dev/how-to/connect-ide/cloud_sql_mssql_admin_mcp/</guid><description>&lt;p>This guide covers how to use &lt;a href="https://github.com/googleapis/genai-toolbox">MCP Toolbox for Databases&lt;/a> to expose your
 developer assistant tools to create and manage Cloud SQL for SQL Server
 instance, database and users:&lt;/p>
 &lt;ul>
