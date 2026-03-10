@@ -208,7 +208,8 @@ func (s *stdioSession) readInputStream(ctx context.Context) error {
 
 		// Record session duration
 		sessionDuration := time.Since(sessionStart).Seconds()
-		durationAttrs := fullAttrs
+		durationAttrs := make([]attribute.KeyValue, len(fullAttrs))
+		copy(durationAttrs, fullAttrs)
 		if err != nil && err != io.EOF {
 			durationAttrs = append(durationAttrs, attribute.String("error.type", err.Error()))
 		}
@@ -381,7 +382,8 @@ func sseHandler(s *Server, w http.ResponseWriter, r *http.Request) {
 
 		// Record session duration
 		sessionDuration := time.Since(sessionStart).Seconds()
-		durationAttrs := sessionAttrs
+		durationAttrs := make([]attribute.KeyValue, len(sessionAttrs))
+		copy(durationAttrs, sessionAttrs)
 		if err != nil {
 			span.SetStatus(codes.Error, err.Error())
 			durationAttrs = append(durationAttrs, attribute.String("error.type", err.Error()))
