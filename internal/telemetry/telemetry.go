@@ -154,44 +154,28 @@ func newMeterProvider(ctx context.Context, r *resource.Resource, telemetryOTLP s
 		metricOpts = append(metricOpts, metric.WithReader(metric.NewPeriodicReader(gcpExporter)))
 	}
 
-	// Configure custom histogram bucket boundaries for duration metrics
-	// These boundaries follow the OpenTelemetry semantic conventions recommendation:
-	// https://opentelemetry.io/docs/specs/semconv/general/metrics/#instrument-advice
+	// Configure custom histogram bucket boundaries for duration metrics as per MCP semantic conventions.
 	durationBuckets := []float64{0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, 30, 60, 120, 300}
 
 	// Create views for duration histograms
-	operationDurationView := metric.NewView(
-		metric.Instrument{Name: "mcp.server.operation.duration"},
-		metric.Stream{
-			Aggregation: metric.AggregationExplicitBucketHistogram{
-				Boundaries: durationBuckets,
-			},
-		},
-	)
+	durationHistogramNames := []string{
+		mcpOperationDurationName,
+		mcpSessionDurationName,
+		toolExecutionDurationName,
+	}
 
-	sessionDurationView := metric.NewView(
-		metric.Instrument{Name: "mcp.server.session.duration"},
-		metric.Stream{
-			Aggregation: metric.AggregationExplicitBucketHistogram{
-				Boundaries: durationBuckets,
+	views := make([]metric.View, 0, len(durationHistogramNames))
+	for _, name := range durationHistogramNames {
+		views = append(views, metric.NewView(
+			metric.Instrument{Name: name},
+			metric.Stream{
+				Aggregation: metric.AggregationExplicitBucketHistogram{
+					Boundaries: durationBuckets,
+				},
 			},
-		},
-	)
-
-	toolExecutionDurationView := metric.NewView(
-		metric.Instrument{Name: "toolbox.tool.execution.duration"},
-		metric.Stream{
-			Aggregation: metric.AggregationExplicitBucketHistogram{
-				Boundaries: durationBuckets,
-			},
-		},
-	)
-
-	metricOpts = append(metricOpts,
-		metric.WithView(operationDurationView),
-		metric.WithView(sessionDurationView),
-		metric.WithView(toolExecutionDurationView),
-	)
+		))
+	}
+	metricOpts = append(metricOpts, metric.WithView(views...))
 
 	meterProvider := metric.NewMeterProvider(metricOpts...)
 	return meterProvider, nil
