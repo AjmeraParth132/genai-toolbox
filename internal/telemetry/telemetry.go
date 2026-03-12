@@ -155,6 +155,7 @@ func newMeterProvider(ctx context.Context, r *resource.Resource, telemetryOTLP s
 	}
 
 	// Configure custom histogram bucket boundaries for duration metrics as per MCP semantic conventions.
+	// Source: https://opentelemetry.io/docs/specs/semconv/gen-ai/mcp/#metric-mcpserversessionduration
 	durationBuckets := []float64{0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, 30, 60, 120, 300}
 
 	// Create views for duration histograms
